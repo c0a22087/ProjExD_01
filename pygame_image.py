@@ -8,7 +8,6 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
     gb_img = pg.transform.flip(bg_img,True,False)
-    bg_ls = [bg_img,gb_img]
     tmr = 0
     #こうかとん画像読み込み
     original_img = pg.image.load("ex01/fig/3.png")
@@ -17,7 +16,7 @@ def main():
     kouka_2_img = pg.transform.rotozoom(kouka_hanten_img,5,1.0)
     kouka_3_img = pg.transform.rotozoom(kouka_hanten_img,10,1.0)
 
-    kouka_img=[kouka_hanten_img,kouka_2_img,kouka_3_img]
+    kouka_img=[kouka_hanten_img,kouka_2_img,kouka_3_img,kouka_2_img]
     x=0
     x2=0
     while True:
@@ -32,7 +31,7 @@ def main():
             x2==0
         screen.blit(gb_img,[x2+1600,0])
         #こうかとん
-        screen.blit(kouka_img[tmr%3],[300,200])
+        screen.blit(kouka_img[tmr%4],[300,200])
         pg.display.update()
         x -= 1
         x2-= 1
