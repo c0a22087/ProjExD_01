@@ -6,11 +6,11 @@ def main():
     pg.display.set_caption("はばたけ！こうかとん")
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
-    bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
+    bg_img = pg.image.load("./fig/pg_bg.jpg")
     gb_img = pg.transform.flip(bg_img,True,False)
     tmr = 0
     #こうかとん画像読み込み
-    original_img = pg.image.load("ex01/fig/3.png")
+    original_img = pg.image.load("./fig/3.png")
     #動きこうかとん
     kouka_hanten_img = pg.transform.flip(original_img,True,False)
     kouka_2_img = pg.transform.rotozoom(kouka_hanten_img,5,1.0)
